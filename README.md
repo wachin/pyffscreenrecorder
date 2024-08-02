@@ -1,48 +1,23 @@
 # pyffscreenrecorder
 Capture and record your screen with ffmpeg ussing this Python GUI
 
+# Dependencies
+
+```
+sudo apt install ffmpeg python3-tk tk-dev python3-psutil
+```
 
 
-and working with record the screen in a rectangle of 854x480:
-
-
-
-
-sudo apt install pandoc python3-tk tk-dev python3-psutil
-
-
-
-
-
-this rectangle can be moved around the screen to capture what matters most to you
 
 ## Features
 
+- Record the screen in a rectangle of 854x480 with follow mouse, this rectangle can be moved around the screen to capture what matters most to you
 
-
-- Record rectangle
-- Follow mouse
-- Record in format: mkv
-- Record in format: mp4 (it is necessary to paste the corresponding profile inside the folder 🗀 Profiles)
-- Record in Full Screen (it is necessary to paste the corresponding profile iside the folder 🗀 Profiles)
-
-# Dependencies
-
-
-
-```
-sudo apt install ffmpeg git clex pv
-```
-
-
-
-I suggest to use the Clex File Manager for command line usage, but you can also use: "nnn" or some terminal such as: xfce4-terminal, gnome-terminal, konsole, tilix, qterminal, etc, etc
+  ## 
 
 # Installation
 
-
-
-I suggest that you clone this project into some folder, and that you know that this program will always be cloned there:
+I suggest that you clone this project in a special folder
 
 ```
 git clone https://github.com/wachin/ffmpeg-screencast
@@ -50,43 +25,19 @@ git clone https://github.com/wachin/ffmpeg-screencast
 
 
 
-next you must enter from a terminal into the cloned repository:
-
-```
-cd ffmpeg-screencast
-```
-
-
-
-write in the terminal and hit Enter:
-
-
-
 ## Screencast
 
 
 
-Under clex first get on top of the script:
 
 
+## Join videos (Status not impremented yet)
 
-to stop with:
-
-⌨ Ctrl + C
-
-To record another video repeat the process.
-
-
-
-## Join videos
-
-
-
-To join the videos get on top of the script:
+The join the videos get on top of the script:
 
 → join-mkv.sh
 
-and hit Enter twice, and wait a bit, the videos will be joined into the folder:
+the videos will be joined into the folder:
 
 🗀 recorded-videos
 
@@ -94,27 +45,7 @@ if for some reason you need the initial videos they will be in the folder:
 
 🗀 Old
 
-## To use it with a terminal
-
-
-
-To use with some Linux terminal, just write the name of the script and execute with ENTER like:
-
-**Screencast**
-
-```
-./ffmpeg-yuv444p-losseless-mkv.sh
-```
-
-
-
-You can help with tab to [autocomplete commands](https://www.computerhope.com/tips/tip176.htm)
-
-
-
-
-
-**Join videos**
+script to joind the videos:
 
 ```
 ./join-mkv.sh 
