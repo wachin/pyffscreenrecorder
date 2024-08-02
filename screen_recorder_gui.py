@@ -3,6 +3,12 @@ import subprocess
 import threading
 import signal
 import os
+import psutil
+
+# Obtener la ruta del directorio del script actual
+script_dir = os.path.dirname(os.path.abspath(__file__))
+# Construir la ruta completa al script ffscreenrecord.sh
+ffscreenrecord_path = os.path.join(script_dir, 'src', 'ffscreenrecord.sh')
 
 class ScreenRecorderGUI:
     def __init__(self, master):
@@ -26,10 +32,11 @@ class ScreenRecorderGUI:
         self.output_text.delete(1.0, tk.END)
 
         def run_ffmpeg():
-            self.process = subprocess.Popen(['bash', './ffscreenrecord.sh'],
+            self.process = subprocess.Popen(['bash', ffscreenrecord_path],
                                             stdout=subprocess.PIPE,
                                             stderr=subprocess.STDOUT,
-                                            universal_newlines=True)
+                                            universal_newlines=True,
+                                            preexec_fn=os.setsid)
 
             for line in self.process.stdout:
                 self.output_text.insert(tk.END, line)
@@ -43,7 +50,13 @@ class ScreenRecorderGUI:
 
     def stop_recording(self):
         if self.process:
-            os.kill(self.process.pid, signal.SIGINT)
+            try:
+                parent = psutil.Process(self.process.pid)
+                for child in parent.children(recursive=True):
+                    child.terminate()
+                parent.terminate()
+            except psutil.NoSuchProcess:
+                pass
 
         self.start_button.config(state=tk.NORMAL)
         self.stop_button.config(state=tk.DISABLED)
