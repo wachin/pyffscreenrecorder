@@ -4,7 +4,7 @@ Capture and record your screen with ffmpeg ussing this Python GUI
 # Dependencies
 
 ```
-sudo apt install ffmpeg python3-tk tk-dev python3-psutil
+sudo apt install ffmpeg python3-tk tk-dev python3-psutil x11-utils
 ```
 
 
@@ -13,7 +13,6 @@ sudo apt install ffmpeg python3-tk tk-dev python3-psutil
 
 - Record the screen in a rectangle of 854x480 with follow mouse, this rectangle can be moved around the screen to capture what matters most to you
 
-  ## 
 
 # Installation
 
