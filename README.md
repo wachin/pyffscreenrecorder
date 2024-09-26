@@ -1,79 +1,101 @@
 # pyffscreenrecorder
 Capture and record your screen with ffmpeg ussing this Python GUI
 
-# Dependencies
+## Características
 
+Graba la pantalla en un rectángulo de 854x480 con el seguimiento del mouse, este rectángulo se puede mover alrededor de la pantalla para capturar lo que más te importa
+
+---
+
+# Manual de Usuario: Aplicación de Grabación de Pantalla
+
+## Introducción
+
+Esta aplicación permite grabar la pantalla de tu sistema Linux usando una interfaz gráfica simple. Con ella, puedes iniciar, pausar, reanudar y detener la grabación fácilmente. Además, el video resultante será guardado automáticamente en tu directorio actual.
+
+## Requisitos
+
+1. **Sistema operativo:** Linux Debian (MX Linux, AV Linux, etc), Ubuntu (Kubuntu, UbuntuStudio, etc)
+2. **Dependencias:** Asegúrate de que los siguientes paquetes estén instalados:
 ```
 sudo apt install ffmpeg python3-tk tk-dev python3-psutil x11-utils
 ```
 
+## Instrucciones de Uso
 
+### 1. Abrir la Aplicación
 
-## Features
+1. **Navega al directorio** donde se encuentra la aplicación. Si la aplicación está en el escritorio, puedes abrir una terminal y escribir:
 
-- Record the screen in a rectangle of 854x480 with follow mouse, this rectangle can be moved around the screen to capture what matters most to you
+   ```bash
+   cd ~/Escritorio
+   ```
 
+2. **Inicia la aplicación** escribiendo en la terminal:
 
-# Installation
+   ```bash
+   python3 screen_recorder_gui.py
+   ```
 
-I suggest that you clone this project in a special folder
+### 2. Interfaz Gráfica (GUI)
 
+Una vez que la aplicación esté abierta, verás una ventana con varios botones. Aquí te explicamos cómo usar cada uno:
+
+### 3. Botones de la Aplicación
+
+- **Iniciar Grabación**: Al hacer clic en este botón, comenzará la grabación de la pantalla. Aparecerá un rectángulo de 854x480 píxeles que indica el área que está siendo grabada.
+
+- **Pausar Grabación**: Si deseas pausar la grabación en cualquier momento, haz clic en este botón. El video dejará de grabarse temporalmente, pero la ventana de grabación seguirá visible.
+
+- **Reanudar Grabación**: Este botón solo está disponible después de haber pausado la grabación. Haz clic aquí para continuar grabando desde donde lo dejaste.
+
+- **Detener Grabación**: Una vez que hayas terminado de grabar, presiona este botón para detener la grabación. El video se guardará automáticamente con un nombre como `Out-[fecha-hora].mp4` en el mismo directorio donde se encuentra la aplicación.
+
+- **Área de Texto**: En la parte inferior de la ventana hay un área de texto que muestra el estado actual del proceso de grabación. Aquí verás mensajes de `ffmpeg`, como la configuración y el progreso de la grabación.
+
+### 4. Detalles Técnicos
+
+- **Resolución de grabación**: La aplicación graba en una resolución fija de 854x480 píxeles.
+- **Ubicación del archivo grabado**: El archivo de video se guarda en el mismo directorio donde ejecutas la aplicación, con un nombre que incluye la fecha y hora, por ejemplo: `Out-2024-09-22_14.30.45.mp4`.
+
+### 5. Problemas Comunes
+
+#### El botón "Detener Grabación" no funciona correctamente
+
+Si has pausado la grabación y luego intentas detenerla, asegúrate de haber reanudado primero la grabación antes de detenerla. El botón de "Detener Grabación" ahora debería funcionar correctamente.
+
+#### Script ffscreenrecord.sh
+Si tienes problemas con permisos, asegúrate de que el script `ffscreenrecord.sh` que está en la carpta "src" tenga permisos de ejecución. En la terminal, ejecuta:
+
+```bash
+chmod +x ffscreenrecord.sh
 ```
-git clone https://github.com/wachin/ffmpeg-screencast
-```
+o en el administrador de archivos dale clic derecho y en la pestaña "Permisos" marca ejecución.
+
+---
+
+## Preguntas Frecuentes (FAQ)
+
+### 1. ¿Dónde se guarda el video?
+El video se guarda en el mismo directorio desde el cual ejecutaste la aplicación.
+
+### 2. ¿Qué hago si no tengo `ffmpeg` instalado?
+Sigue las instrucciones en la sección "Instalar `ffmpeg`" para instalarlo en tu sistema Linux.
+
+### 3. ¿Cómo cambio la resolución de grabación?
+La aplicación está configurada para grabar siempre en 854x480 píxeles. Si deseas cambiar esta resolución, tendrás que modificar el script `ffscreenrecord.sh` manualmente.
+
+### 4. ¿Qué pasa si cierro la aplicación mientras grabo?
+Si cierras la aplicación sin detener la grabación, el proceso de grabación seguirá ejecutándose en segundo plano. Para detenerlo, abre el "Monitor del sistema" o usa el comando `kill` en la terminal para detener el proceso de `ffmpeg`.
+
+---
+
+## Notas finales
+
+Esta aplicación es una manera sencilla de grabar tu pantalla en Linux sin tener que lidiar con complicadas opciones de línea de comandos. Si tienes alguna duda o problema, puedes consultar al desarrollador.
+
+---
+
+Dios les bendiga
 
 
-
-## Screencast
-
-
-
-
-
-## Join videos (Status not impremented yet)
-
-The join the videos get on top of the script:
-
-→ join-mkv.sh
-
-the videos will be joined into the folder:
-
-🗀 recorded-videos
-
-if for some reason you need the initial videos they will be in the folder:
-
-🗀 Old
-
-script to joind the videos:
-
-```
-./join-mkv.sh 
-```
-
-
-
-**Other FFmpeg options** I have made this program so that it records with the videos in the mkv format because it gave me the best results, but you can record with mp4 by copying some of the profiles that are in the folder:
-
-🗀 Profiles
-
-where there are also profiles to record in full screen, example:
-
-[![img](https://github.com/wachin/ffmpeg-screencast/raw/main/vx_images/570244321122966.png)](https://github.com/wachin/ffmpeg-screencast/blob/main/vx_images/570244321122966.png)
-
-and that is:
-
-[![img](https://github.com/wachin/ffmpeg-screencast/raw/main/vx_images/315614269937310.png)](https://github.com/wachin/ffmpeg-screencast/blob/main/vx_images/315614269937310.png)
-
-then run clex in a terminal in the main path and see:
-
-[![img](https://github.com/wachin/ffmpeg-screencast/raw/main/vx_images/115894179807496.png)](https://github.com/wachin/ffmpeg-screencast/blob/main/vx_images/115894179807496.png)
-
-hit Enter end the recorder are into the full screen
-
-# The beggining
-
-
-
-First I started doing some tutorials on how to record the screen with ffmpeg from the terminal. In Spanish:
-
-**[Screencast] Grabar pantalla con FFmpeg 4.2 + seguir cursor + mostrar cursor + grabar rectangulo de 480p** <https://facilitarelsoftwarelibre.blogspot.com/2021/03/screencast-ffmpeg-follow-mouse-linux.html>
