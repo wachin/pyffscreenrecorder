@@ -49,11 +49,18 @@ pero sino, lanzalo escribiendo en la terminal:
 
 ### 2. Interfaz Gráfica (GUI)
 
-Una vez que la aplicación esté abierta, verás una ventana con varios botones. Aquí te explicamos cómo usar cada uno:
+Una vez que la aplicación esté abierta:
+
+![](vx_images/374543323289196-lanzando-screen_recorder.py.webp)
+
+ verás una ventana con varios botones. Aquí te explicamos cómo usar cada uno:
 
 ### 3. Botones de la Aplicación
 
 - **Iniciar Grabación**: Al hacer clic en este botón, comenzará la grabación de la pantalla. Aparecerá un rectángulo de 854x480 píxeles que indica el área que está siendo grabada.
+- 
+![](vx_images/491154105846719-Interfaz-gráfica-abierta-de-pyffscreenrecorder.webp)
+
 
 - **Pausar Grabación**: Si deseas pausar la grabación en cualquier momento, haz clic en este botón. El video dejará de grabarse temporalmente, pero la ventana de grabación seguirá visible.
 
