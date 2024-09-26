@@ -3,7 +3,7 @@ Capture and record your screen with ffmpeg ussing this Python GUI
 
 ## Características
 
-Graba la pantalla en un rectángulo de 854x480 con el seguimiento del mouse, este rectángulo se puede mover alrededor de la pantalla para capturar lo que más te importa
+Graba la pantalla en un rectángulo de 854x480 con el seguimiento del mouse, este rectángulo se moverá alrededor de la pantalla para capturar lo que más te importa según donde usted se mueva
 
 ---
 
@@ -57,7 +57,7 @@ Una vez que la aplicación esté abierta:
 
 ### 3. Botones de la Aplicación
 
-- **Iniciar Grabación**: Al hacer clic en este botón, comenzará la grabación de la pantalla. Aparecerá un rectángulo de 854x480 píxeles que indica el área que está siendo grabada.
+- **Iniciar Grabación**: Al hacer clic en este botón, comenzará la grabación de la pantalla. Aparecerá un rectángulo de 854x480 píxeles que indica el área que está siendo grabada. Este rectángulo se moverá alrededor de la pantalla para capturar lo que más te importa según donde usted se mueva
 - 
 ![](vx_images/491154105846719-Interfaz-gráfica-abierta-de-pyffscreenrecorder.webp)
 
@@ -114,5 +114,3 @@ Esta aplicación es una manera sencilla de grabar tu pantalla en Linux sin tener
 ---
 
 Dios les bendiga
-
-
