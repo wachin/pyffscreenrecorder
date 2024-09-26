@@ -37,7 +37,11 @@ o lo puedes descargar dando clic en:
 
 1. **Navega al directorio** Abre una terminal en el lugar donde está el código de este programa
 
-2. **Inicia la aplicación** escribiendo en la terminal:
+2. **Inicia la aplicación** Si usas MX Linux este trae incorporado un lanzador de scripts en python así que solo deberás darle clic derecho al archivo:
+
+screen_recorder_gui.py
+
+pero sino, lanzalo escribiendo en la terminal:
 
    ```bash
    python3 screen_recorder_gui.py
