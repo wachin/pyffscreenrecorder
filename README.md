@@ -111,6 +111,10 @@ Si cierras la aplicación sin detener la grabación, el proceso de grabación se
 
 Esta aplicación es una manera sencilla de grabar tu pantalla en Linux sin tener que lidiar con complicadas opciones de línea de comandos. Si tienes alguna duda o problema, puedes consultar al desarrollador.
 
+Este programa está basado en:
+
+[https://github.com/wachin/ffmpeg-screencast](https://github.com/wachin/ffmpeg-screencast)
+
 ---
 
 Dios les bendiga
