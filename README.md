@@ -18,18 +18,24 @@ Esta aplicación permite grabar la pantalla de tu sistema Linux usando una inter
 1. **Sistema operativo:** Linux Debian (MX Linux, AV Linux, etc), Ubuntu (Kubuntu, UbuntuStudio, etc)
 2. **Dependencias:** Asegúrate de que los siguientes paquetes estén instalados:
 ```
-sudo apt install ffmpeg python3-tk tk-dev python3-psutil x11-utils
+sudo apt install ffmpeg python3-tk tk-dev python3-psutil x11-utils git
 ```
+
+# Descarga el programa
+Puedes clonar este repositorio
+```
+git clone https://github.com/wachin/pyffscreenrecorder
+```
+
+o lo puedes descargar dando clic en:
+
+<>Code > Local > Download Zip
 
 ## Instrucciones de Uso
 
 ### 1. Abrir la Aplicación
 
-1. **Navega al directorio** donde se encuentra la aplicación. Si la aplicación está en el escritorio, puedes abrir una terminal y escribir:
-
-   ```bash
-   cd ~/Escritorio
-   ```
+1. **Navega al directorio** Abre una terminal en el lugar donde está el código de este programa
 
 2. **Inicia la aplicación** escribiendo en la terminal:
 
