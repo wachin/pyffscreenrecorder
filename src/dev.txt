@@ -1,0 +1,12 @@
+Obtiene las dimensiones de tu pantalla usando xdpyinfo.
+Calcula las coordenadas para centrar la ventana de grabación de 854x480 en tu pantalla.
+Usa estas coordenadas calculadas en el comando de FFmpeg.
+
+
+xdpyinfo calcula coordenadas de pantalla para FFmpeg -i
+
+Uso de xdpyinfo para calcular las coordenadas para centrar la ventana de grabación de 854x480 en la pantalla y serán usadas en el comando -i de FFmpeg
+
+
+
+
