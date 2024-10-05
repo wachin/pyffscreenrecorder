@@ -1,6 +1,8 @@
 # pyffscreenrecorder
 Capture and record your screen with ffmpeg ussing this Python GUI
 
+Captura y graba tu pantalla con ffmpeg usando esta GUI de Python
+
 ## Características
 
 Graba la pantalla en un rectángulo de 854x480 con el seguimiento del mouse, este rectángulo se moverá alrededor de la pantalla para capturar lo que más te importa según donde usted se mueva
