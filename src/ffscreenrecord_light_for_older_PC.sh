@@ -13,8 +13,9 @@ Y_OFFSET=$((($SCREEN_HEIGHT - 480) / 2))
 # Usa estas coordenadas calculadas en el comando -i de FFmpeg.
 ffmpeg -follow_mouse 50 -show_region 1 -video_size 854x480 -framerate 30 -f x11grab -i :0.0+$X_OFFSET,$Y_OFFSET \
        -f alsa -ac 2 -i default \
-       -c:v libx264 -crf 23 -preset veryfast \
-       "./Out-$(date '+%Y-%m-%d_%H.%M.%S').mp4"
+       -c:v libx264 -crf 14 -preset fast \
+       -b:v 3M -maxrate 3M -bufsize 6M \
+       "./Out-Old-PC$(date '+%Y-%m-%d_%H.%M.%S').mp4"
 
 # Cambios hechos
 # El códec libx264rgb genera archivos con una calidad extremadamente alta (sin pérdida), pero es muy intensivo en recursos. 
